@@ -9,7 +9,7 @@
     "test-watch": "jest --verbose --coverage --watchAll",
     "lint": "eslint **/*.js"
   },
-  "author": "",
+  "author": "Hollie",
   "license": "ISC",
   "dependencies": {
     "eslint": "^5.7.0",
