@@ -8,7 +8,7 @@ let integerA = faker.random.number();
 let integerB = faker.random.number();
 
 // test for add
-describe('arithmetic.add()'), () => {
+describe('arithmetic.add'), () => {
  
   it('works when given two integers', () => {
     let message = arithmetic.add (integerA, integerB);
