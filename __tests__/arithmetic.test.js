@@ -60,11 +60,11 @@ describe('arithmetic.subtract()', () => {
 // test for multiple
 describe ('arthimetic.multiply()', () => {
 
-  it('works when given two integers'), () => {
+  it('works when given two integers', () => {
     let message = arithmetic.multiply(integerA, integerB);
     let sum = integerA * integerB;
     expect(message).toEqual(sum);
-  };
+  });
 
   it('does not allow objects', () => {
     let message = arithmetic.multiply({}, {});
@@ -81,16 +81,16 @@ describe ('arthimetic.multiply()', () => {
 
 describe ('arithmetic.divide()', () => {
 
-  it('works when given two integers'), () => {
+  it('works when given two integers', () => {
     let message = arithmetic.divide(integerA, integerB);
     let sum = integerA / integerB;
     expect(message).toEqual(sum);
-  };
+  });
 
-  it('does not allow either integers to be zero'), () => {
+  it('does not allow either integers to be zero', () => {
     let message = arithmetic.divide(0, integerA);
     expect(message).toBeNull();
-  };
+  });
 
   it('does not allow objects', () => {
     let message = arithmetic.multiply({}, {});
