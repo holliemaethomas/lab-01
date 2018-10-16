@@ -1,91 +1,73 @@
 'use strict';
-
+// declaring dependencies
 const arithmetic = require('../lib/arithmetic.js');
-var faker = require('faker');
-var testNumber1 = faker.random.number();
-var testNumber2 = faker.random.number();
+const faker = require('faker');
 
+// creating vars
+let integerA = faker.random.number();
+let integerB = faker.random.number();
+
+// test for add
 describe('arithmetic.add()', () => {
-
-  it('works when given two numbers', () => {
-    let message = arithmetic.add(testNumber1, testNumber2);
-    let expectedOutput = testNumber1 + testNumber2;
-    console.log(message);
-    expect(message).toEqual(expectedOutput);
+ 
+  it('works when given two integers', () => {
+    let message = arithmetic.add (integerA, integerB);
+    let sum = integerA + integerB;
+    expect(message).toEqual(sum);
   });
-
-  it('does not allow booleans', () => {
-    let message = arithmetic.add(false, false);
-    expect(message).toBeNull();
-  });
-
+  
   it('does not allow objects', () => {
-    let message = arithmetic.add({}, {});
+    let message = arithmetic.add( {}, {});
     expect(message).toBeNull();
   });
-
+  
   it('does not allow arrays', () => {
-    let message = arithmetic.add([], []);
+    let message = arithmetic.add( [], []);
     expect(message).toBeNull();
   });
 
   it('does not allow strings', () => {
-    let message = arithmetic.add('55', '30');
+    let message = arithmetic.add('', '');
     expect(message).toBeNull();
   });
-
-  it('requires one param', () => {
-    let message = arithmetic.add();
-    expect(message).toBeNull();
-  });
-
 });
 
-describe('arithmetic.subtract()', () => {
-  it('works when given two numbers', () => {
-    let message = arithmetic.subtract(testNumber1, testNumber2);
-    let expectedOutput = testNumber1 - testNumber2;
-    console.log(message);
-    expect(message).toEqual(expectedOutput);
+// test for subtract
+describe('arithmetic.subtract()'), () => {
+
+  it('works when given two integers', () => {
+    let message = arithmetic.subtract(integerA, integerB);
+    let sum = integerA - integerB;
+    expect(message).toEqual(sum);
   });
 
-  it('does not allow booleans', () => {
-    let message = arithmetic.subtract(false, false);
-    expect(message).toBeNull();
-  });
-
-  it('does not allow objects', () => {
+  it('does not allow objects', () =>{
     let message = arithmetic.subtract({}, {});
     expect(message).toBeNull();
   });
 
-  it('does not allow arrays', () => {
+  it('does not allow arrays', () =>{
     let message = arithmetic.subtract([], []);
     expect(message).toBeNull();
   });
 
-  it('does not allow strings', () => {
-    let message = arithmetic.subtract('45', '30');
+  it('does not allow strings',() =>  {
+    let message = arithmetic.subtract('', '');
     expect(message).toBeNull();
   });
+};
 
-  it('requires one param', () => {
-    let message = arithmetic.subtract();
-    expect(message).toBeNull();
-  });
+// test for multiple
+describe ('arthimetic.multiply()'), () => {
 
-});
+  it('works when given two integers'), () => {
+    let message = arithmetic.multiply(integerA, integerB);
+    let sum = integerA * integerB;
+    expect(message).toEqual(sum);
+  };
 
-describe('arithmetic.multiply()', () => {
-  it('works when given two numbers', () => {
-    let message = arithmetic.multiply(testNumber1, testNumber2);
-    let expectedOutput = testNumber1 * testNumber2;
-    console.log(message);
-    expect(message).toEqual(expectedOutput);
-  });
-
-  it('does not allow booleans', () => {
-    let message = arithmetic.multiply(false, false);
+  it('does not allow objects', () => {
+    let message = arithmetic.multiply({}, {});
     expect(message).toBeNull();
   });
 
@@ -93,65 +75,30 @@ describe('arithmetic.multiply()', () => {
     let message = arithmetic.multiply([], []);
     expect(message).toBeNull();
   });
+};
+
+// tests for division
+
+describe ('arithmetic.divide()'), () => {
+
+  it('works when given two integers'), () => {
+    let message = arithmetic.divide(integerA, integerB);
+    let sum = integerA / integerB;
+    expect(message).toEqual(sum);
+  };
+
+  it('does not allow either integers to be zero'), () => {
+    let message = arithmetic.divide(0, integerA);
+    expect(message).toBeNull();
+  };
 
   it('does not allow objects', () => {
     let message = arithmetic.multiply({}, {});
     expect(message).toBeNull();
   });
 
-  it('does not allow strings', () => {
-    let message = arithmetic.multiply('45', '30');
-    expect(message).toBeNull();
-  });
-
-  it('requires one param', () => {
-    let message = arithmetic.multiply();
-    expect(message).toBeNull();
-  });
-
-});
-
-describe('arithmetic.divide()', () => {
-  it('works when given two numbers', () => {
-    let message = arithmetic.divide(testNumber1, testNumber2);
-    let expectedOutput = testNumber1 / testNumber2;
-    console.log(message);
-    expect(message).toEqual(expectedOutput);
-  });
-
-  it('neither input can equal zero', () => {
-    let message = arithmetic.divide(testNumber1, 0);
-    expect(message).toBeNull();
-  });
-
-  it('neither input can equal zero', () => {
-    let message = arithmetic.divide(0, testNumber2);
-    expect(message).toBeNull();
-  });
-
-  it('does not allow booleans', () => {
-    let message = arithmetic.divide(false, false);
-    expect(message).toBeNull();
-  });
-
   it('does not allow arrays', () => {
-    let message = arithmetic.divide([], []);
+    let message = arithmetic.multiply([], []);
     expect(message).toBeNull();
   });
-
-  it('does not allow objects', () => {
-    let message = arithmetic.divide({}, {});
-    expect(message).toBeNull();
-  });
-
-  it('does not allow strings', () => {
-    let message = arithmetic.divide('45', '30');
-    expect(message).toBeNull();
-  });
-
-  it('requires one param', () => {
-    let message = arithmetic.divide();
-    expect(message).toBeNull();
-  });
-
-});
+};
