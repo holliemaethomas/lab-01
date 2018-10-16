@@ -87,15 +87,15 @@ describe ('arithmetic.divide()', () => {
     expect(message).toEqual(sum);
   });
 
-  it('does not allow either integers to be zero', () => {
-    let message = arithmetic.divide(integerA, 0);
-    expect(message).toBeNull();
-  });
+  // it('does not allow either integers to be zero', () => {
+  //   let message = arithmetic.divide(integerA, 0);
+  //   expect(message).toBeNull();
+  // });
 
-  it('does not allow either integers to be zero', () => {
-    let message = arithmetic.divide(0, integerB);
-    expect(message).toBeNull();
-  });
+  // it('does not allow either integers to be zero', () => {
+  //   let message = arithmetic.divide(0, integerB);
+  //   expect(message).toBeNull();
+  // });
 
   it('does not allow objects', () => {
     let message = arithmetic.multiply({}, {});
