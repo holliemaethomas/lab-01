@@ -7,10 +7,12 @@
     "start": "node index.js",
     "test": "jest --verbose --coverage",
     "test-watch": "jest --verbose --coverage --watchAll",
-    "lint": "eslint **/*.js"},
+    "lint": "eslint **/*.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^5.7.0",
     "faker": "^4.1.0",
     "jest": "^23.6.0",
     "lint": "^1.1.2",
