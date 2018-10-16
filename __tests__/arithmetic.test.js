@@ -88,7 +88,12 @@ describe ('arithmetic.divide()', () => {
   });
 
   it('does not allow either integers to be zero', () => {
-    let message = arithmetic.divide(0, integerA);
+    let message = arithmetic.divide(integerA, 0);
+    expect(message).toBeNull();
+  });
+
+  it('does not allow either integers to be zero', () => {
+    let message = arithmetic.divide(0, integerB);
     expect(message).toBeNull();
   });
 
