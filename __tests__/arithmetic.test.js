@@ -57,7 +57,7 @@ describe('arithmetic.subtract()', () => {
   });
 });
 
-// test for multiple
+// test for multiply
 describe ('arthimetic.multiply()', () => {
 
   it('works when given two integers', () => {
