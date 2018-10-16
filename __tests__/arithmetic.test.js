@@ -16,18 +16,18 @@ describe('arithmetic.add()'), () => {
     expect(message).toEqual(sum);
   })
   
-  it('does not allow objects'{
-    let message = arithmetic.add( {}, {}),
+  it('does not allow objects', () =>{
+    let message = arithmetic.add( {}, {});
     expect(message).toBeNull();
   });
   
-  it('does not allow arrays'{
-    let message = arthimetic.add( [], []),
+  it('does not allow arrays', () =>{
+    let message = arthimetic.add( [], []);
     expect(message).toBeNull();
   });
 
-  it('does not allow strings' {
-    let message = arthimetic.add('', ''),
+  it('does not allow strings', () => {
+    let message = arthimetic.add('', '');
     expect(message).toBeNull();
   })
 };
@@ -41,18 +41,18 @@ describe('arithmetic.subtract()'), () => {
     expect(message).toEqual(sum);
   })
 
-    it('does not allow objects'{
-      let message = arithmetic.subtract({}, {}),
+    it('does not allow objects', () =>{
+      let message = arithmetic.subtract({}, {});
       expect(message).toBeNull();
     });
 
-    it('does not allow arrays'{
-      let message = arthimetic.subtract([], []),
+    it('does not allow arrays', () =>{
+      let message = arthimetic.subtract([], []);
       expect(message).toBeNull();
     });
 
-    it('does not allow strings' {
-      let message = arthimetic.subtract('', ''),
+    it('does not allow strings',() =>  {
+      let message = arthimetic.subtract('', '');
       expect(message).toBeNull();
     })
   };
@@ -66,13 +66,13 @@ describe ('arthimetic.multiply()'), () => {
     expect(message).toEqual(sum);
   };
 
-  it('does not allow objects' {
-    let message = arthimetic.multiply({}, {}),
+  it('does not allow objects', () => {
+    let message = arthimetic.multiply({}, {});
     expect(message).toBeNull();
   });
 
-  it('does not allow arrays' {
-    let message = arthimetic.multiply([], []),
+  it('does not allow arrays', () => {
+    let message = arthimetic.multiply([], []);
     expect(message).toBeNull();
   });
 }
@@ -87,20 +87,21 @@ describe ('arithmetic.divide()'), () => {
     expect(message).toEqual(sum);
   };
 
-  it('does not allow either integers to be zero')
-  let message = arthimetic.divide(0, integerA),
+  it('does not allow either integers to be zero'), () => {
+  let message = arthimetic.divide(0, integerA);
   expect(message).toBeNull();
+  };
 
-  it('does not allow objects' {
-    let message = arthimetic.multiply({}, {}),
+  it('does not allow objects', () => {
+    let message = arthimetic.multiply({}, {});
     expect(message).toBeNull();
   });
 
-  it('does not allow arrays' {
-    let message = arthimetic.multiply([], []),
+  it('does not allow arrays', () => {
+    let message = arthimetic.multiply([], []);
     expect(message).toBeNull();
   });
-}
+
 
 
 
