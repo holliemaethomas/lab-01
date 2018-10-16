@@ -1,41 +1,49 @@
 'use strict';
 
-// declaring dependencies
-const faker = require('faker');
-const greetingTest = require('../lib/greet.js');
+const greetTest = require('../lib/greet.js');
+var faker = require('faker');
+var randomName = faker.name.findName();
 
-// declaring vars
-const quickName = faker.name.findName();
+describe('greetTest.hello()', () => {
 
-// greet test
+  it('works when given a name', () => {
+    let message = greetTest.hello(randomName);
+    let expectedOutput = `hello, ${randomName}`;
+    console.log(message);
+    expect(message).toEqual(expectedOutput);
+  });
 
-describe('greetingTest.hello()'), () => {
+  it('works when given ', () => {
+    let message = greetTest.hello('world');
+    let expectedOutput = `hello, world`;
+    console.log(message);
+    expect(message).toEqual(expectedOutput);
+  });
 
-  it('works when given a string', () => {
-    let message = greetingTest.hello(''),
-    let returnMessage = 'hello' + (''),
-    expect(message).toEqual(returnMessage)
-  })
-
-  it('works when given world', () => {
-    let message = greetingTest.hello('world'),
-      let returnMessage = 'hello' + ('world'),
-      expect(message).toEqual(returnMessage)
-  })
-
-  it('does not allow objects', () => { 
-    let message = greetingTest.hello({}),
+  it('only allows one param', () => {
+    let message = greetTest.hello(randomName, randomName);
     expect(message).toBeNull();
   });
 
-
-  it('does not allow arrays', () => {
-    let message = greetingTest.hello([]),
-      expect(message).toBeNull();
+  it('does not allow numeric values', () => {
+    let message = greetTest.hello(14);
+    expect(message).toBeNull();
   });
 
+  it('does not allow arrays as a param', () => {
+    let message = greetTest.hello([]);
+    expect(message).toBeNull();
+  });
 
+  it('does not allow objects as a param', () => {
+    let message = greetTest.hello({});
+    expect(message).toBeNull();
+  });
 
+  it('requires one param', () => {
+    let message = greetTest.hello();
+    expect(message).toBeNull();
+  });
 
-
-}
+});
+  

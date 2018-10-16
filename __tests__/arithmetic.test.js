@@ -11,97 +11,94 @@ let integerB = faker.random.number();
 describe('arithmetic.add()'), () => {
  
   it('works when given two integers', () => {
-    let message = arthimetic.add (integerA, integerB)
+    let message = arithmetic.add (integerA, integerB);
     let sum = integerA + integerB;
     expect(message).toEqual(sum);
-  })
+  });
   
-  it('does not allow objects', () =>{
+  it('does not allow objects', () => {
     let message = arithmetic.add( {}, {});
     expect(message).toBeNull();
   });
   
-  it('does not allow arrays', () =>{
-    let message = arthimetic.add( [], []);
+  it('does not allow arrays', () => {
+    let message = arithmetic.add( [], []);
     expect(message).toBeNull();
   });
 
   it('does not allow strings', () => {
-    let message = arthimetic.add('', '');
+    let message = arithmetic.add('', '');
     expect(message).toBeNull();
-  })
+  });
 };
 
 // test for subtract
 describe('arithmetic.subtract()'), () => {
 
   it('works when given two integers', () => {
-    let message = arthimetic.subtract(integerA, integerB)
+    let message = arithmetic.subtract(integerA, integerB);
     let sum = integerA - integerB;
     expect(message).toEqual(sum);
-  })
+  });
 
-    it('does not allow objects', () =>{
-      let message = arithmetic.subtract({}, {});
-      expect(message).toBeNull();
-    });
+  it('does not allow objects', () =>{
+    let message = arithmetic.subtract({}, {});
+    expect(message).toBeNull();
+  });
 
-    it('does not allow arrays', () =>{
-      let message = arthimetic.subtract([], []);
-      expect(message).toBeNull();
-    });
+  it('does not allow arrays', () =>{
+    let message = arithmetic.subtract([], []);
+    expect(message).toBeNull();
+  });
 
-    it('does not allow strings',() =>  {
-      let message = arthimetic.subtract('', '');
-      expect(message).toBeNull();
-    })
-  };
+  it('does not allow strings',() =>  {
+    let message = arithmetic.subtract('', '');
+    expect(message).toBeNull();
+  });
+};
 
 // test for multiple
 describe ('arthimetic.multiply()'), () => {
 
   it('works when given two integers'), () => {
-    let message = arithmetic.multiply(integerA, integerB)
+    let message = arithmetic.multiply(integerA, integerB);
     let sum = integerA * integerB;
     expect(message).toEqual(sum);
   };
 
   it('does not allow objects', () => {
-    let message = arthimetic.multiply({}, {});
+    let message = arithmetic.multiply({}, {});
     expect(message).toBeNull();
   });
 
   it('does not allow arrays', () => {
-    let message = arthimetic.multiply([], []);
+    let message = arithmetic.multiply([], []);
     expect(message).toBeNull();
   });
-}
+};
 
 // tests for division
 
 describe ('arithmetic.divide()'), () => {
 
   it('works when given two integers'), () => {
-    let message = arithmetic.divide(integerA, integerB)
+    let message = arithmetic.divide(integerA, integerB);
     let sum = integerA / integerB;
     expect(message).toEqual(sum);
   };
 
   it('does not allow either integers to be zero'), () => {
-  let message = arthimetic.divide(0, integerA);
-  expect(message).toBeNull();
+    let message = arithmetic.divide(0, integerA);
+    expect(message).toBeNull();
   };
 
   it('does not allow objects', () => {
-    let message = arthimetic.multiply({}, {});
+    let message = arithmetic.multiply({}, {});
     expect(message).toBeNull();
   });
 
   it('does not allow arrays', () => {
-    let message = arthimetic.multiply([], []);
+    let message = arithmetic.multiply([], []);
     expect(message).toBeNull();
   });
-
-
-
-
+};
