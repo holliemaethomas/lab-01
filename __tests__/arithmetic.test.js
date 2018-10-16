@@ -33,7 +33,7 @@ describe('arithmetic.add()', () => {
 });
 
 // test for subtract
-describe('arithmetic.subtract()'), () => {
+describe('arithmetic.subtract()', () => {
 
   it('works when given two integers', () => {
     let message = arithmetic.subtract(integerA, integerB);
@@ -55,10 +55,10 @@ describe('arithmetic.subtract()'), () => {
     let message = arithmetic.subtract('', '');
     expect(message).toBeNull();
   });
-};
+});
 
 // test for multiple
-describe ('arthimetic.multiply()'), () => {
+describe ('arthimetic.multiply()', () => {
 
   it('works when given two integers'), () => {
     let message = arithmetic.multiply(integerA, integerB);
@@ -75,11 +75,11 @@ describe ('arthimetic.multiply()'), () => {
     let message = arithmetic.multiply([], []);
     expect(message).toBeNull();
   });
-};
+});
 
 // tests for division
 
-describe ('arithmetic.divide()'), () => {
+describe ('arithmetic.divide()', () => {
 
   it('works when given two integers'), () => {
     let message = arithmetic.divide(integerA, integerB);
@@ -101,4 +101,4 @@ describe ('arithmetic.divide()'), () => {
     let message = arithmetic.multiply([], []);
     expect(message).toBeNull();
   });
-};
+});
