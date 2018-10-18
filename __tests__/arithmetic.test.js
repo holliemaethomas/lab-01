@@ -96,10 +96,4 @@ describe ('arithmetic.divide()', () => {
     let message = arithmetic.multiply([], []);
     expect(message).toBeNull();
   });
-
-
-  it('does now work when one integer is a zero', () => {
-    let message = arithmetic.multiply(integerA, 0);
-    expect(message).toBeNull();
-  });
 });
